@@ -1,0 +1,62 @@
+[
+  {
+    "id": 0,
+    "imgFileName": "card-blue",
+    "number": "1234 5678 9012 3456",
+    "firstName": "John",
+    "lastName": "Doe",
+    "expirationDate": "12/20",
+    "cvv": "123",
+    "hashedCode": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"
+  },
+  {
+    "id":  1,
+    "imgFileName": "card-red",
+    "number": "9876 5432 1098 7654",
+    "firstName": "Alice",
+    "lastName": "Smith",
+    "expirationDate": "06/23",
+    "cvv": "456",
+    "hashedCode": "91b4d142823f7d20c5f08df69122de43f35f057a988d9619f6d3138485c9a203"
+  },
+  {
+    "id":  2,
+    "imgFileName": "card-green",
+    "number": "5555 3333 8888 1111",
+    "firstName": "Bob",
+    "lastName": "Johnson",
+    "expirationDate": "09/21",
+    "cvv": "789",
+    "hashedCode": "eb4ea223b35e735ca33a4d684bad98db1af36b218126cd3ab47c69c85735369c"
+  },
+  {
+    "id":  3,
+    "imgFileName": "card-pink",
+    "number": "4444 9999 6666 7777",
+    "firstName": "Eva",
+    "lastName": "Williams",
+    "expirationDate": "03/25",
+    "cvv": "321",
+    "hashedCode": "c7e9988d0ac79f466bf33b7bc5a8e31ebad2fe1f6e17c78919f5717acce44230"
+  },
+  {
+    "id":  4,
+    "imgFileName": "card-purple",
+    "number": "1111 2222 3333 4444",
+    "firstName": "Chris",
+    "lastName": "Anderson",
+    "expirationDate": "08/22",
+    "cvv": "654",
+    "hashedCode": "fdcd5e736d3f375e581b01ba1b8d773375435ba1861fd230c6b594db598de8a1"
+  },
+  {
+    "id":  5,
+    "imgFileName": "card-grey",
+    "number": "7777 6666 5555 4444",
+    "firstName": "Olivia",
+    "lastName": "Miller",
+    "expirationDate": "05/24",
+    "cvv": "987",
+    "hashedCode": "8c244b370747c1930a4e0967254778ddbb69f6a409e62beebe5f92191a09a3a1"
+  }
+]
