@@ -10,5 +10,5 @@ export function hashString(input: string): string {
 
 export const regexName = /^[a-zA-ZÀ-ÖØ-öø-ÿ-']{3,20}$/;
 export const regexCardNumber = /^\d{4} \d{4} \d{4} \d{4}$/;
-
-
+export const regexCardCode = /^\d{4,6}$/;
+export const regexPrice = /^\d{1,4}(\.\d{1,2})?$/;

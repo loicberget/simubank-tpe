@@ -4,11 +4,11 @@ import {Box, IconButton, styled, Typography} from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
-import {positiveModulo} from "../useful";
+import {positiveModulo} from "../../useful.ts";
 
 import cards from "./cards.json";
-import Card from "./CardsMock";
-import { ModifyCardDialog } from "./ModifyCardDialog";
+import Card from "./CardsMock.ts";
+import { ModifyCardDialog } from "./ModifyCardDialog.tsx";
 
 interface CardSelectorProps {
 	selectedCard: Card;
@@ -64,7 +64,7 @@ export const CardSelector = (props: CardSelectorProps) => {
 		setIsModifyDialogOpen(true)
 	}
 
-	const CardImages = cardList.map((card) => {
+	const cardImages = cardList.map((card) => {
 		return (
 			<div
 				key={card.id}
@@ -84,10 +84,7 @@ export const CardSelector = (props: CardSelectorProps) => {
 	})
 
 	const handleButtonDown = () => {
-		setSelectedCard(cardList[selectedCard.id + 1 % cardList.length]);
-		for(let i = 0; i < 100; i++) {
-		console.log(selectedCard.id);
-		}
+		setSelectedCard(cardList[(selectedCard.id + 1) % cardList.length]);
 	}
 
 	const handleButtonUp = () => {
@@ -97,10 +94,11 @@ export const CardSelector = (props: CardSelectorProps) => {
 	return (
 		<Box sx={boxStyle}>
 			<Typography>Selectionner une carte</Typography>
+			<Typography>Cliquer pour modifier</Typography>
 			<IconButton onClick={handleButtonUp}>
 				<KeyboardArrowUpIcon/>
 			</IconButton>
-			{CardImages}
+			{cardImages}
 			<IconButton onClick={handleButtonDown}>
 				<KeyboardArrowDownIcon/>
 			</IconButton>
