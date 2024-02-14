@@ -101,6 +101,24 @@ export const Numpad: FunctionComponent<NumpadProps> = (props) => {
 		}
 	}
 
+	const requestTransaction = () => {
+		fetch('http://127.0.0.1:80/transaction', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				entete: "DemandePorteur",
+				horodatage: new Date().toISOString(),
+				emetteur: 6,
+				banque: "",
+				cardNumber: selectedCard.number,
+				montant: price.current,
+				reponse: "",
+			})
+		}).then(response => response.json())
+	}
+
 	const handleDoneButton = () => {
 		switch (mode.current) {
 			case NumpadMode.PRICE:
@@ -117,6 +135,7 @@ export const Numpad: FunctionComponent<NumpadProps> = (props) => {
 				if (hashString(code.current) === selectedCard.hashedCode) {
 					setMessage("Code correct");
 					setInputBackgroundColor("success.main");
+					requestTransaction();
 				} else {
 					setMessage("Code incorrect. Ré-essayez.");
 					setInputBackgroundColor("error.main");
